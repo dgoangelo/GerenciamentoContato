@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>42ff562c-a522-4135-b37f-29c7d8573ac2</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ContactManagement.Data\ContactManagement.Data.csproj" />
+    <ProjectReference Include="..\ContactManagement.Domain\ContactManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

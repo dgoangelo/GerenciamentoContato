@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  contactmanagement.ui:
+    image: ${DOCKER_REGISTRY-}contactmanagementui
+    build:
+      context: .
+      dockerfile: src/ContactManagement.UI/Dockerfile

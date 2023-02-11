@@ -1,0 +1,50 @@
+﻿@page "{id:int}"
+@model ContactManagement.UI.Pages.UpdateContactUserModelModel
+
+@{
+	ViewData["Title"] = "Update Contact User";
+}
+
+
+
+<form method="post">
+	
+	<div class="row">
+		<div class="col-md-6">
+			<label>Name</label>
+			<input readonly="readonly" asp-for="ContactUser.Id" class="form-control" />
+			<span class="text-danger" asp-validation-for="ContactUser.Id"></span>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<label>Name</label>
+			<input asp-for="ContactUser.Name" class="form-control"/>
+			<span  class="text-danger" asp-validation-for="ContactUser.Name"></span>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<label>Email</label>
+			<input readonly="readonly" asp-for="ContactUser.Email" class="form-control" />
+			<span class="text-danger" asp-validation-for="ContactUser.Email"></span>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<label>Contact</label>
+			<input asp-for="ContactUser.Contact" class="form-control" />
+			<span class="text-danger" asp-validation-for="ContactUser.Contact"></span>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<br/>
+			<button type="submit" class="btn btn-success">Save</button>
+		</div>
+	</div>
+</form>

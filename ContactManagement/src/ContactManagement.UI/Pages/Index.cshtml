@@ -1,0 +1,46 @@
+﻿@page
+@model IndexModel;
+
+@{
+	ViewData["Title"] = "Home page";
+	Layout = "Shared/_Layout";
+}
+
+<div class="text-center">
+
+	<a class="btn btn-info" asp-page="/CreateContactUser">New Contact User</a>
+
+	<br />
+	<br />
+	<br />
+
+	<form method="post">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Contact</th>
+					<th>Email</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model.ContactUsers)
+				{
+					<tr>
+						<td>@item.Id</td>
+						<td>@item.Name</td>
+						<td>@item.Contact</td>
+						<td>@item.Email</td>
+						<td>
+							<button class="btn" asp-page-handler="delete" asp-route-id="@item.Id"><i class="fa-regular fa-trash-can"></i></button>
+							<a asp-page="UpdateContactUserModel" asp-route-id="@item.Id"><i class="fa-solid fa-eye"></i></a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</form>
+</div>
+
